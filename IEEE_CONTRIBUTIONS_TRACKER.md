@@ -15,10 +15,11 @@ This document tracks all pull requests submitted by **Sri Ram Kunamsetty** to th
 ---
 
 ## 📊 Summary Dashboard
-- **Total Pull Requests Submitted:** 11 (10 Feature PRs across 3 Pillars + 1 Upstream Bugfix PR)
+- **Total Pull Requests Submitted:** 13 (12 Feature PRs across 4 Pillars + 1 Upstream Bugfix PR)
 - **Merged PRs:** **11 of 11 (100% MERGED into `upstream/main`)**
-- **Total Points Earned:** **250 Points**
-- **Merge Status:** **100% Conflict-Free & Merged**
+- **Pending Review (Newly Submitted):** 2 ([PR #874](https://github.com/praveenscience/One-File-Tools/pull/874) and [PR #875](https://github.com/praveenscience/One-File-Tools/pull/875))
+- **Total Points:** **330 Points** (250 Points Merged + 80 Points in Active Review)
+- **Merge Status:** **100% Conflict-Free across all branches**
 - **Security & Quality Audits:** Zero DOM XSS vulnerabilities, Zero FOUC, Strict Theme State Persistence, Web Audio API compliant.
 
 ---
@@ -38,6 +39,8 @@ This document tracks all pull requests submitted by **Sri Ram Kunamsetty** to th
 | **9** | [**#852**](https://github.com/praveenscience/One-File-Tools/pull/852) | **Interactive Toast & Notification System** | Design System | Easy (20 pts) | `add/ds-notifications` | 15 Nov, 11:43:06 AM IST<br>`2026-11-15 06:13:06 UTC` | 15 Nov, 08:53:31 PM IST<br>`2026-11-15 15:23:31 UTC` | 🟣 **MERGED by @praveenscience** |
 | **10** | [**#853**](https://github.com/praveenscience/One-File-Tools/pull/853) | **Project Management Kanban Board** | Design System | Medium (30 pts) | `add/ds-kanban-board` | 15 Nov, 11:51:34 AM IST<br>`2026-11-15 06:21:34 UTC` | 15 Nov, 08:53:33 PM IST<br>`2026-11-15 15:23:33 UTC` | 🟣 **MERGED by @praveenscience** |
 | **11** | [**#854**](https://github.com/praveenscience/One-File-Tools/pull/854) | **Fix password-analyzer-uncodebar category** | Bug Fix | 10 pts | `fix/password-analyzer-category` | 15 Nov, 02:14:46 PM IST<br>`2026-11-15 08:44:46 UTC` | 15 Nov, 06:54:45 PM IST<br>`2026-11-15 13:24:45 UTC` | 🟣 **MERGED by @praveenscience** |
+| **12** | [**#874**](https://github.com/praveenscience/One-File-Tools/pull/874) | **Add Quest: Regex Escape Room** (Closes #868) | Quests | Hard (40 pts) | `add/quest-regex-escape-room` | 16 Nov, 06:21:41 PM IST<br>`2026-11-16 12:51:41 UTC` | — | 🟡 **SUBMITTED (Under Review)** |
+| **13** | [**#875**](https://github.com/praveenscience/One-File-Tools/pull/875) | **Add Quest: API Rate Limiter Simulator** (Closes #867) | Quests | Hard (40 pts) | `add/quest-api-rate-limiter` | 16 Nov, 06:24:06 PM IST<br>`2026-11-16 12:54:06 UTC` | — | 🟡 **SUBMITTED (Under Review)** |
 
 ---
 
