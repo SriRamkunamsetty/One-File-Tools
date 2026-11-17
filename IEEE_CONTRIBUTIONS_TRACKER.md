@@ -1,4 +1,4 @@
-# 🏆 IEEE Contributor Pull Requests Tracker — Dashboard & Live Status
+# 🏆 IEEE Contributor Pull Requests Tracker — Live Status & Audit
 
 This document tracks all 13 pull requests submitted by **Sri Ram Kunamsetty** to the upstream repository [praveenscience/One-File-Tools](https://github.com/praveenscience/One-File-Tools) as an **IEEE Contributor** during IEEE IGDTUW Open Source Week 10.0, mentored by **Praveen Kumar Purushothaman** (@praveenscience).
 
@@ -23,18 +23,18 @@ This document tracks all 13 pull requests submitted by **Sri Ram Kunamsetty** to
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-- 🟣 **Merged Pull Requests:** **11 / 11 Feature & Fix PRs from Phase 1** (100% acceptance rate on Phase 1)
-- 🟠 **Action Required / Changes Requested:** **2 PRs** ([PR #874](https://github.com/praveenscience/One-File-Tools/pull/874) and [PR #875](https://github.com/praveenscience/One-File-Tools/pull/875))
+- 🟣 **Merged Pull Requests:** **11 / 11 Feature & Fix PRs from Phase 1** (100% acceptance rate)
+- 🟠 **Changes Requested (Phase 2):** **2 PRs** ([PR #874](https://github.com/praveenscience/One-File-Tools/pull/874) and [PR #875](https://github.com/praveenscience/One-File-Tools/pull/875))
 - 🟢 **Approved PRs:** 11 / 13
 - 🔵 **Open PRs:** 2 / 13
-- **Total Points Earned / In-Flight:** **330 Points** (250 Points Officially Merged + 80 Points Pending Review)
-- **Security & Quality Score:** Zero DOM XSS vulnerabilities, Zero FOUC, Clean Web Audio context reuse, Local CI validation passing.
+- **Total Contributor Points:** **330 Points** (250 Points Officially Merged + 80 Points In Active Review)
+- **Code Quality Standard:** Zero DOM XSS vulnerabilities, Zero FOUC, Single shared Web Audio context, Local CI validator passing.
 
 ---
 
 ## 📅 Pull Requests Master Log & Live Status
 
-| # | PR | Contributed Utility | Pillar | Difficulty / Points | Branch Name | Submitted (IST) | Status Badge | Review Highlights |
+| # | PR | Contributed Utility | Pillar | Difficulty / Points | Branch Name | Submitted (IST) | Status Badge | Review Decision & Notes |
 |:---:|:---:|---|:---:|:---:|:---:|:---:|:---:|---|
 | **1** | [**#844**](https://github.com/praveenscience/One-File-Tools/pull/844) | **CORS Header Debugger & Tester** | Tools | Easy (20 pts) | `add/cors-debugger` | 15 Nov, 09:08 AM | `🟣 MERGED` | Approved & Merged by @praveenscience (XSS & FOUC verified) |
 | **2** | [**#845**](https://github.com/praveenscience/One-File-Tools/pull/845) | **JSON-LD Schema Generator** | Tools | Medium (30 pts) | `add/json-ld-generator` | 15 Nov, 10:50 AM | `🟣 MERGED` | Approved & Merged by @praveenscience (escapeHtml on all inputs) |
@@ -47,67 +47,94 @@ This document tracks all 13 pull requests submitted by **Sri Ram Kunamsetty** to
 | **9** | [**#852**](https://github.com/praveenscience/One-File-Tools/pull/852) | **Toast & Notification System** | Design System | Easy (20 pts) | `add/ds-notifications` | 15 Nov, 11:43 AM | `🟣 MERGED` | Approved & Merged by @praveenscience (escapeHtml on toast inputs) |
 | **10** | [**#853**](https://github.com/praveenscience/One-File-Tools/pull/853) | **Project Management Kanban Board** | Design System | Medium (30 pts) | `add/ds-kanban-board` | 15 Nov, 11:51 AM | `🟣 MERGED` | Approved & Merged by @praveenscience (TechStack & XSS fixed) |
 | **11** | [**#854**](https://github.com/praveenscience/One-File-Tools/pull/854) | **Fix password-analyzer category** | Bug Fix | 10 pts | `fix/password-analyzer-category` | 15 Nov, 02:14 PM | `🟣 MERGED` | Approved & Merged by @praveenscience (CI validator fix) |
-| **12** | [**#874**](https://github.com/praveenscience/One-File-Tools/pull/874) | **Regex Escape Room** (Issue #868) | Quests | Hard (40 pts) | `add/quest-regex-escape-room` | 16 Nov, 06:21 PM | `🟠 CHANGES REQUESTED` | Strip tracker file & rebase cleanly from upstream `main` |
-| **13** | [**#875**](https://github.com/praveenscience/One-File-Tools/pull/875) | **API Rate Limiter Simulator** (Issue #867) | Quests | Hard (40 pts) | `add/quest-api-rate-limiter` | 16 Nov, 06:24 PM | `🟠 CHANGES REQUESTED` | Rebalance wave difficulty, strip tracker, add bot filtering |
+| **12** | [**#874**](https://github.com/praveenscience/One-File-Tools/pull/874) | **Regex Escape Room** (Issue #868) | Quests | Hard (40 pts) | `add/quest-regex-escape-room` | 16 Nov, 06:21 PM | `🟠 CHANGES REQUESTED` | In-depth gameplay audit by @praveenscience (see Round 2 review) |
+| **13** | [**#875**](https://github.com/praveenscience/One-File-Tools/pull/875) | **API Rate Limiter Simulator** (Issue #867) | Quests | Hard (40 pts) | `add/quest-api-rate-limiter` | 16 Nov, 06:24 PM | `🟠 CHANGES REQUESTED` | In-depth economy & balance audit by @praveenscience (see Round 2 review) |
 
 ---
 
-## 🔍 Detailed Mentor Feedback & Technical Evaluation
+## 🔍 Detailed Mentor Feedback (Round 2) & Technical Evaluation
 
-Project Mentor **Praveen Kumar Purushothaman** (@praveenscience) reviewed the latest batch of pull requests. Below is a detailed breakdown of each recommendation, along with an objective technical evaluation verifying why it is essential.
+Project Mentor **Praveen Kumar Purushothaman** (@praveenscience) conducted an exceptionally detailed, deep technical simulation and code audit of PR #874 and PR #875. Below is the full breakdown of his findings and why each recommendation is essential.
 
-### 1. Stripping `IEEE_CONTRIBUTIONS_TRACKER.md` from Upstream PRs
-- **Mentor Feedback:** *"IEEE_CONTRIBUTIONS_TRACKER.md is a personal tracker and doesn't belong in the upstream repository. Please delete it from the PR. The 4 docs tracker commits came from your fork's history and aren't part of this quest. A PR should only touch the quest itself: the HTML file, its PNG, and the one entry in data/quests.json."*
-- **Technical Evaluation:** **CRITICAL & 100% CORRECT.**
-  - *Why:* In open-source production repositories with hundreds of external contributors, feature PRs must maintain strict atomicity. Including personal tracking documents in an upstream PR pollutes the master Git commit history and causes merge conflicts for other contributors. Personal tracking files belong exclusively on your personal fork repository or local disk.
+### Part A: PR #874 (Regex Escape Room) Audit
 
-### 2. Game Balance & Winnable Wave Mathematics (PR #875)
-- **Mentor Feedback:** *"Victory doesn't seem reachable. The limiter has no way to tell legit requests from malicious ones, so a fixed share of everything it lets through damages the server (-3 HP each, -1.5 with load balancer). In a simulation with the most defensive setup (5/s capacity + load balancer), waves 9 and 10 still crash the server, and wave 7 ends near 4% HP. Fix: give the player a way to deal with malicious traffic (per-client limits, a WAF/bot-filter tower, IP blocking), or rebalance the damage and malicious ratios."*
-- **Technical Evaluation:** **DEEPLY IMPRESSIVE & ESSENTIAL.**
-  - *Why:* Praveen ran mathematical simulations on our game rules. Because malicious packets were mixed into the stream at up to 65% in Wave 10, and our rate limiter only capped overall volume without inspecting headers or client IPs, a percentage of malicious packets inevitably reached the server and drained health to 0%. Introducing an interactive WAF / Bot Filter node or IP-blocking mechanic makes the game strategic, solvable, and educational.
+#### 1. Preventing Concept Shortcuts / Trivial Bypasses
+- **Mentor's Finding:** Every room could be bypassed without using the regex concept taught in that room:
+  - Chamber 3 (inverted set `[^aeiou]`): Solved by simply typing `y` (matches all targets, matches no decoys).
+  - Chamber 7 (word boundary `\b`): Solved by typing ` cat` (space followed by cat).
+  - Chamber 8 (non-capturing `(?:...)`): Solved by `^(h|ft)` using a standard capturing group.
+  - Chamber 9 (lookahead `(?=...)`): Solved by typing `px`.
+  - Chamber 10 (negative lookahead `(?!...)`): Solved by typing `[^e]$`.
+  - Chamber 11 (backreference `\1`): Solved by literal alternation `aa|77|zz|99`.
+  - In general, any room could be solved by pasting literal target alternatives `^(TargetA|TargetB)$`.
+- **Recommendation:** Add targeted decoys that defeat these trivial shortcuts, and validate that the regex pattern actually contains the required construct (`\b`, `(?:`, `(?=`, `(?!`, `\1`).
+- **Technical Evaluation:** **BRILLIANT & CRITICAL.**
+  - *Why:* In an educational quest designed to teach regular expressions, if a player can bypass lookaheads by typing `px` or bypass backreferences by typing `aa|77|zz|99`, the puzzle fails its educational objective. Enforcing construct usage and adding targeted decoys turns the puzzle into a true learning mastery tool.
 
-### 3. Score Incentive Alignment (Penalizing Dropped Legitimate Traffic)
-- **Mentor Feedback:** *"Rejecting legit traffic is rewarded. It earns +5 and has no penalty, so lowering capacity is always the safe move. That inverts the 'served vs rejected' score from #867. Penalise dropped legit requests, and make high served volume itself load the server."*
-- **Technical Evaluation:** **HIGHLY REALISTIC & SRE COMPLIANT.**
-  - *Why:* In real-world API engineering, a rate limiter that drops 99% of paying users to keep the server idle is a failure, not a success. Rewarding throttled legitimate traffic created an exploit where setting capacity to minimum was an unbeatable strategy. Penalizing dropped legitimate traffic forces players to balance throughput against stability.
+#### 2. Progressive Hint System (Single Character with Time Penalty)
+- **Mentor's Finding:** Revealing the entire answer for −25 score points allowed players to bypass the puzzle for free when score was 0 (`Math.max(0, ...)`). Issue #868 specified revealing **one character at a time with a time penalty**.
+- **Technical Evaluation:** **ESSENTIAL FOR GAME BALANCE.**
+  - *Why:* Progressive hints prevent players from instant-solving rooms. Imposing a time penalty (e.g. +15 seconds added to room timer) directly affects the escape time leaderboard.
 
-### 4. Frame-Rate Independence via Delta Time (`dt`)
-- **Mentor Feedback:** *"Movement uses per-frame speeds instead of delta time, so the game runs twice as fast on 120 Hz displays."*
-- **Technical Evaluation:** **INDUSTRY BEST PRACTICE.**
-  - *Why:* When animations update position with `x += speed` inside `requestAnimationFrame`, users on 60 Hz screens see 60 updates/sec, while users on 120 Hz (MacBooks, gaming monitors) see 120 updates/sec. Scaling movement by `(currentTime - lastTime) / 1000` guarantees identical packet speed across all devices.
+#### 3. Escape-Time Leaderboard Ranking
+- **Mentor's Finding:** Leaderboard sorted by score (`b.score - a.score`) and saved time as a formatted string. Issue #868 specified ranking by **escape time**: store total seconds as a number, sort ascending (fastest escape wins), and pause timer while the "Chamber Cleared" modal is open.
+- **Technical Evaluation:** **100% SPEC COMPLIANT.**
+  - *Why:* In speedrun / escape-room games, lower escape time is the true metric of victory. Pausing the timer while reading the victory modal prevents unfair time inflation.
 
-### 5. Responsive Canvas Aspect-Ratio & Retina Display Scaling
-- **Mentor Feedback:** *"The canvas is width:100%; height:480px with no aspect ratio, so at 400px wide it squashes about 2.25x. There's also no devicePixelRatio scaling, so it's blurry on retina. Use height:auto; aspect-ratio: 900 / 480 and scale the backing store."*
-- **Technical Evaluation:** **HIGH IMPACT FOR VISUAL POLISH.**
-  - *Why:* Fixing height at 480px while width is 100% causes extreme vertical distortion on mobile screens. CSS `aspect-ratio: 900 / 480` preserves proportions, while backing-store scaling (`ctx.scale(dpr, dpr)`) makes fonts and graphics razor-sharp on high-DPI displays.
-
-### 6. Regex Puzzle Clarity & False Decoy Elimination (PR #874)
-- **Mentor Feedback:** Anchor three-character regex patterns to prevent partial substring bleed, eliminate repeated characters in Chamber 11 decoys, and clear syntax error banners on room reset.
-- **Technical Evaluation:** **VERY USEFUL.**
-  - *Why:* Prevents ambiguous solutions and eliminates edge cases where a technically valid regex fails due to substring collisions.
+#### 4. Highlighting Bug (Escape after Match, Not Before)
+- **Mentor's Finding:** `escapeHtml(text).replace(cleanRe, ...)` replaces already-escaped HTML, so matching `amp` on `a&b` (escaped to `a&amp;b`) corrupts internal HTML markup to `a&<mark>amp</mark>;b`.
+- **Recommendation:** Match against raw text first, then escape each text chunk.
+- **Technical Evaluation:** **CLASSIC PARSING PITFALL & ESSENTIAL FIX.**
+  - *Why:* Escaping text before regex replacement corrupts entity codes. Tokenizing the match offsets first and escaping text chunks guarantees valid HTML output.
 
 ---
 
-## 🛠️ Step-by-Step Action Plan for PR #874 & PR #875
+### Part B: PR #875 (API Rate Limiter Simulator) Audit
 
-```mermaid
-flowchart TD
-    A["Branch Rebase & Clean"] --> B["Apply Game Balance & Feature Fixes"]
-    B --> C["Local Verification (npm run validate)"]
-    C --> D["Force Push Clean Branch to Origin"]
-    D --> E["Mentor Praveen Approves & Merges (+80 pts)"]
-```
+#### 1. Game-Over Bypass Vulnerability
+- **Mentor's Finding:** `triggerGameOver()` called `pauseWave()`, which re-enabled the "Start Wave" button outside the modal overlay. Players could click "Start Wave" at 0 HP, serve a legitimate request to regain 0.2 HP, and continue playing!
+- **Technical Evaluation:** **CRITICAL BUG FIX.**
+  - *Why:* Game over must lock down the start button until the wave is restarted.
 
-1. **Clean Branch Rebuild for PR #874:**
-   - Rebase directly onto current `upstream/main`.
-   - Strip `IEEE_CONTRIBUTIONS_TRACKER.md` from the commit.
-   - Refine Chamber 3 and Chamber 11 puzzle tests.
-   - Force-push `add/quest-regex-escape-room`.
+#### 2. Tower Refund Exploit on Retry
+- **Mentor's Finding:** `waveStartCredits` was saved before buying towers. Retrying a wave restored credits but did not reset `hasWaf`, `hasCache`, or `hasLoadBalancer`, giving players free permanent towers on retry.
+- **Technical Evaluation:** **EXCELLENT CATCH.**
+  - *Why:* Game state snapshots must include both economy and active tower flags.
 
-2. **Clean Branch Rebuild & Balancing for PR #875:**
-   - Rebase directly onto current `upstream/main`.
-   - Strip `IEEE_CONTRIBUTIONS_TRACKER.md`.
-   - Add WAF Bot-Filter / IP Blocking tower upgrade so malicious traffic can be strategically filtered.
-   - Add delta time (`dt`) for 60/120 Hz monitor consistency.
-   - Measure actual throughput, latency, and rejection rate.
-   - Force-push `add/quest-api-rate-limiter`.
+#### 3. Limiter Irrelevance & Economy Rebalance
+- **Mentor's Finding:** In Wave 1, players earned $400–500, immediately buying all towers. With WAF deployed, every limiter setting won (100% of 500 test runs) because legitimate traffic healed the server with zero server capacity ceiling.
+- **Recommendation:** Add an explicit server capacity limit (req/s) where excessive legitimate traffic causes 503s and server stress. Make Load Balancer increase server capacity by +100%. Rebalance earnings so WAF is affordable around Wave 3–4.
+- **Technical Evaluation:** **MASTERCLASS IN GAME DESIGN.**
+  - *Why:* Without server load limits and tight economy, the rate limiter becomes irrelevant. Forcing players to tune rate limits to prevent server capacity exhaustion makes the simulator authentically realistic.
+
+#### 4. True Measured Telemetry (No Hard-Coded Constants)
+- **Mentor's Finding:** Latency was pushing hard-coded constants (12ms, 28/45ms, 180ms). Throughput incorrectly counted WAF drops and 429s as "processed" requests. Rejection rate counted malicious requests reaching the server as rejected.
+- **Recommendation:** Compute true measured rolling averages for throughput, latency, and rejection percentage.
+- **Technical Evaluation:** **NON-NEGOTIABLE FOR PRODUCTION SIMULATORS.**
+  - *Why:* Real telemetry must reflect mathematical reality, not static mock constants.
+
+#### 5. Canvas Wide-Screen Stretched Layout
+- **Mentor's Finding:** `width: 100%` with `max-height: 480px` breaks the 900:480 aspect ratio when the container exceeds 900px on desktop screens.
+- **Recommendation:** Apply `max-width: 900px; margin: 0 auto; width: 100%;` without breaking the ratio.
+
+---
+
+## 📋 Exact Implementation Checklist for Next Push
+
+Mentor Praveen requested:
+> *"When you update, reply with **each** review point and the **line number** where it's fixed. Play the quest to the end and make sure every claim in the PR description and comments matches the code."*
+
+1. **PR #874 (Regex Escape Room):**
+   - [ ] Add construct checks & targeted decoys for all 12 chambers.
+   - [ ] Implement progressive one-character hint revealing with +15s time penalty.
+   - [ ] Store escape time in seconds (number), sort leaderboard ascending, and freeze timer during modal display.
+   - [ ] Fix highlight rendering: match raw text, slice chunks, then escape.
+   - [ ] Add input debounce and `maxlength="60"`.
+2. **PR #875 (API Rate Limiter Simulator):**
+   - [ ] Disable Start Wave button while game-over/wave-complete modal is active.
+   - [ ] Reset tower upgrade flags on wave retry.
+   - [ ] Implement server capacity limit (req/s) where excessive traffic overloads the origin server.
+   - [ ] Rebalance economy: $1 per 200 OK; WAF costs $160 (affordable wave 3-4). Load Balancer doubles server capacity.
+   - [ ] Measure real latency based on queue load; calculate true throughput and rejection rate.
+   - [ ] Apply `max-width: 900px; margin: 0 auto; width: 100%;` to prevent wide-screen stretching.
+   - [ ] Freeze token bucket refill during pause.
