@@ -18,9 +18,9 @@ This document tracks all 13 pull requests submitted by **Sri Ram Kunamsetty** to
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│  TOTAL PRs: 13   │  MERGED: 11 (85%)   │  OPEN & AUDITED: 2 (15%)   │  CONFLICTS: 0    │
-│  TOTAL POINTS: 330 PTS  (250 Pts Merged  +  80 Pts Under Review)                       │
-│  MERGEABILITY: 100% CLEAN (All PRs conflict-free with upstream/main)                   │
+│  TOTAL CONTRIBUTIONS: 13   │  MERGED: 13 (100%)   │  OPEN: 0 (0%)   │  CONFLICTS: 0    │
+│  TOTAL POINTS: 330 / 330 PTS (100% OFFICIALLY MERGED INTO UPSTREAM MAIN)               │
+│  ACCEPTANCE RATE: 100% (All 13 Tools, Quests & Design Systems Merged by Maintainer)   │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -48,8 +48,8 @@ This document tracks all 13 pull requests submitted by **Sri Ram Kunamsetty** to
 | **9** | [**#852**](https://github.com/praveenscience/One-File-Tools/pull/852) | **Toast & Notification System** | Design System | Easy (20 pts) | `🟣 MERGED` | `🟢 APPROVED` | `✅ MERGED` | `✅ PASS` | Approved & Merged by @praveenscience (escapeHtml on toast inputs) |
 | **10** | [**#853**](https://github.com/praveenscience/One-File-Tools/pull/853) | **Project Management Kanban Board** | Design System | Medium (30 pts) | `🟣 MERGED` | `🟢 APPROVED` | `✅ MERGED` | `✅ PASS` | Approved & Merged by @praveenscience (TechStack & XSS fixed) |
 | **11** | [**#854**](https://github.com/praveenscience/One-File-Tools/pull/854) | **Fix password-analyzer category** | Bug Fix | 10 pts | `🟣 MERGED` | `🟢 APPROVED` | `✅ MERGED` | `✅ PASS` | Approved & Merged by @praveenscience (CI validator fix) |
-| **12** | [**#874**](https://github.com/praveenscience/One-File-Tools/pull/874) | **Regex Escape Room** ([#868](https://github.com/praveenscience/One-File-Tools/issues/868)) | Quests | Hard (40 pts) | `🔵 OPEN` | `🟢 REVISED & AUDITED` | `✅ MERGEABLE` | `✅ PASS (2/2)` | Round 2 fixes applied in commit `03fdcd3` (line numbers cited in [PR comment](https://github.com/praveenscience/One-File-Tools/pull/874#issuecomment-6946815293)) |
-| **13** | [**#875**](https://github.com/praveenscience/One-File-Tools/pull/875) | **API Rate Limiter Simulator** ([#867](https://github.com/praveenscience/One-File-Tools/issues/867)) | Quests | Hard (40 pts) | `🔵 OPEN` | `🟢 REVISED & AUDITED` | `✅ MERGEABLE` | `✅ PASS (2/2)` | Round 2 fixes applied in commit `6f92075` (line numbers cited in [PR comment](https://github.com/praveenscience/One-File-Tools/pull/875#issuecomment-6946827038)) |
+| **12** | [**#874**](https://github.com/praveenscience/One-File-Tools/pull/874) | **Regex Escape Room** ([#868](https://github.com/praveenscience/One-File-Tools/issues/868)) | Quests | Hard (40 pts) | `🟣 MERGED` | `🟢 APPROVED` | [`b88fc2c`](https://github.com/praveenscience/One-File-Tools/commit/b88fc2c4e43cb8b524d741c650207b8371ebd057) | `✅ PASS` | Adapted, fixed & merged into `main` by @praveenscience (Closes #868) |
+| **13** | [**#875**](https://github.com/praveenscience/One-File-Tools/pull/875) | **API Rate Limiter Simulator** ([#867](https://github.com/praveenscience/One-File-Tools/issues/867)) | Quests | Hard (40 pts) | `🟣 MERGED` | `🟢 APPROVED` | [`dcdb2ff`](https://github.com/praveenscience/One-File-Tools/commit/dcdb2ffc0e7bee99dde83662d642c91a14247d0b) | `✅ PASS` | Adapted, fixed & merged into `main` by @praveenscience (Closes #867) |
 
 ---
 
@@ -143,3 +143,17 @@ Mentor Praveen requested:
    - [x] **Token Bucket Pause Refill Frozen:** Resets `lastRefillTime = performance.now()` upon wave start/resume (Line 1319).
    - [x] **Cache Card Sync:** Card text ("40% of GET") and code logic (`Math.random() < 0.40`) synchronized (Lines 647, 1066).
    - [x] **Formal Review Response:** Posted on [PR #875 Comment](https://github.com/praveenscience/One-File-Tools/pull/875#issuecomment-6946827038).
+
+---
+
+## 🏆 Final Milestone: 100% Contributions Merged Directly into Upstream Main!
+
+Mentor **Praveen Kumar Purushothaman** (@praveenscience) reviewed our Round 2 line-by-line audit responses, verified our fixes, adapted and merged both Hard Quests directly into upstream `main`:
+- **PR #874 (Regex Escape Room - Issue #868):** Merged into upstream `main` in commit [`b88fc2c`](https://github.com/praveenscience/One-File-Tools/commit/b88fc2c4e43cb8b524d741c650207b8371ebd057) (closes #868).
+- **PR #875 (API Rate Limiter Simulator - Issue #867):** Merged into upstream `main` in commit [`dcdb2ff`](https://github.com/praveenscience/One-File-Tools/commit/dcdb2ffc0e7bee99dde83662d642c91a14247d0b) (closes #867).
+
+### 🎉 Final Scorecard
+- **Total Contributions:** 13 / 13 Merged into Upstream (100% Acceptance Rate)
+- **Total Points Earned:** 330 / 330 Points (Phase 1: 250 Points + Phase 2: 80 Points)
+- **Merge Conflicts:** 0 (Clean rebase & sync with `upstream/main`)
+- **CI Build Status:** 100% Clean (`node scripts/validate.js` -> 180 tools, 59 quests, 16 quizzes, 31 design system, 9 instruments all clean)
